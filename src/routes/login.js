@@ -25,9 +25,9 @@ module.exports = (app) => {
               const message = `Le mot de passe est incorrect.`;
               return res.status(401).json({ message });
             }
+            const message = `Connexion réussie.`;
+            return res.json({ message, data: user });
           });
-        const message = `Connexion réussie.`;
-        return res.json({ message, data: user });
       })
       .catch((error) => {
         const message = `L'utilisateur n'a pas pu se connecter. Reessayer dans quelques instants.`;
