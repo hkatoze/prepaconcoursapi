@@ -14,6 +14,8 @@ initDb();
 
 /* ........All routes list........... */
 require("./src/routes/home")(app);
+require("./src/routes/signupToApi")(app);
+require("./src/routes/loginToApi")(app);
 require("./src/routes/resetPassword")(app);
 require("./src/routes/resetPasswordCodeVerify")(app);
 
@@ -21,7 +23,8 @@ require("./src/routes/getUserByPk")(app);
 require("./src/routes/updateUser")(app);
 require("./src/routes/deleteUser")(app);
 require("./src/routes/getAllUsers")(app);
-require("./src/routes/createUser")(app);
+require("./src/routes/signup")(app);
+require("./src/routes/login")(app);
 
 require("./src/routes/getConcourByPk")(app);
 require("./src/routes/updateConcour")(app);
@@ -46,9 +49,6 @@ require("./src/routes/updateLesson")(app);
 require("./src/routes/deleteLesson")(app);
 require("./src/routes/getAllLessons")(app);
 require("./src/routes/createLesson")(app);
-
-require("./src/routes/signupToApi")(app);
-require("./src/routes/loginToApi")(app);
 
 //404 error managment
 app.use(({ res }) => {
