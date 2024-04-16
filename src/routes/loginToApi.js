@@ -23,13 +23,12 @@ module.exports = (app) => {
               expiresIn: "365d",
             });
 
-            Admin.update(
-              { fcmToken: req.body.fcmToken },
-              { where: { id: admin.id } }
-            ).then((_) => {
-              const message = `Connexion administrateur réussie.`;
-              return res.json({ message, data: admin, token });
-            });
+            Admin.update({ fcmToken: token }, { where: { id: admin.id } }).then(
+              (_) => {
+                const message = `Connexion administrateur réussie.`;
+                return res.json({ message, data: admin, token });
+              }
+            );
           });
       })
       .catch((error) => {
