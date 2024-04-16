@@ -20,6 +20,12 @@ require("./src/routes/getUserByPk")(app);
 require("./src/routes/updateUser")(app);
 require("./src/routes/getAllUsers")(app);
 require("./src/routes/createUser")(app);
+
+require("./src/routes/getConcourByPk")(app);
+require("./src/routes/updateConcour")(app);
+require("./src/routes/getAllConcours")(app);
+require("./src/routes/createConcour")(app);
+
 require("./src/routes/signupToApi")(app);
 require("./src/routes/loginToApi")(app);
 
