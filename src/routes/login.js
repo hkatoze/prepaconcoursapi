@@ -2,7 +2,7 @@ const { User } = require("../db/sequelize");
 const bcrypt = require("bcrypt");
 
 module.exports = (app) => {
-  app.post("/api/login", (req, res) => {
+  app.post("/api/login", auth, (req, res) => {
     if (req.body.emailAddress) {
       return User.findOne({ where: { emailAddress: req.body.emailAddress } })
         .then((user) => {
