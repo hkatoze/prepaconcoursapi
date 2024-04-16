@@ -31,7 +31,7 @@ module.exports = (app) => {
       const concourId = req.query.concourId;
 
       return Answer.findAll({ where: { concourId } }).then((answers) => {
-        const message = `Il y'a au total ${answers.length} reponses pour la question ${concourId}`;
+        const message = `Il y'a au total ${answers.length} reponses pour le concour ${concourId}`;
         res.json({ message, data: answers });
       });
     }

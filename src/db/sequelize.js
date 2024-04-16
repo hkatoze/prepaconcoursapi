@@ -5,6 +5,7 @@ const ConcourModel = require("./models/Concour");
 const AdminModel = require("./models/Admin");
 const QuestionModel = require("./models/Question");
 const AnswerModel = require("./models/Answer");
+const LessonModel = require("./models/Lesson");
 
 const sequelize = new Sequelize(
   "u833159023_prepaconcours",
@@ -23,6 +24,7 @@ const Admin = AdminModel(sequelize, DataTypes);
 const Concour = ConcourModel(sequelize, DataTypes);
 const Question = QuestionModel(sequelize, DataTypes);
 const Answer = AnswerModel(sequelize, DataTypes);
+const Lesson = LessonModel(sequelize, DataTypes);
 
 const initDb = () => {
   return sequelize.sync().then((_) => {
@@ -30,4 +32,4 @@ const initDb = () => {
   });
 };
 
-module.exports = { initDb, User, Admin, Concour, Question, Answer };
+module.exports = { initDb, User, Admin, Concour, Question, Answer, Lesson };

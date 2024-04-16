@@ -41,6 +41,12 @@ require("./src/routes/deleteAnswer")(app);
 require("./src/routes/getAllAnswers")(app);
 require("./src/routes/createAnswer")(app);
 
+require("./src/routes/getLessonByPk")(app);
+require("./src/routes/updateLesson")(app);
+require("./src/routes/deleteLesson")(app);
+require("./src/routes/getAllLessons")(app);
+require("./src/routes/createLesson")(app);
+
 require("./src/routes/signupToApi")(app);
 require("./src/routes/loginToApi")(app);
 
