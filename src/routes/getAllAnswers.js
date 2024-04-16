@@ -27,14 +27,7 @@ module.exports = (app) => {
         res.json({ message, data: answers });
       });
     }
-    if (req.query.concourId) {
-      const concourId = req.query.concourId;
 
-      return Answer.findAll({ where: { concourId } }).then((answers) => {
-        const message = `Il y'a au total ${answers.length} reponses pour le concour ${concourId}`;
-        res.json({ message, data: answers });
-      });
-    }
     Answer.findAll()
       .then((answers) => {
         const message = `La liste complète des reponses a bien été reccupérée.`;
