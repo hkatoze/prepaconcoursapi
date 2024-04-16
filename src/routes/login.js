@@ -1,6 +1,7 @@
 const { User } = require("../db/sequelize");
 const bcrypt = require("bcrypt");
 const auth = require("../auth/auth");
+const { Op } = require("sequelize");
 
 module.exports = (app) => {
   app.post("/api/login", auth, (req, res) => {
