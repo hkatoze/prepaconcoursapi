@@ -16,15 +16,24 @@ initDb();
 require("./src/routes/home")(app);
 require("./src/routes/resetPassword")(app);
 require("./src/routes/resetPasswordCodeVerify")(app);
+
 require("./src/routes/getUserByPk")(app);
 require("./src/routes/updateUser")(app);
+require("./src/routes/deleteUser")(app);
 require("./src/routes/getAllUsers")(app);
 require("./src/routes/createUser")(app);
 
 require("./src/routes/getConcourByPk")(app);
 require("./src/routes/updateConcour")(app);
+require("./src/routes/deleteConcour")(app);
 require("./src/routes/getAllConcours")(app);
 require("./src/routes/createConcour")(app);
+
+require("./src/routes/getQuestionByPk")(app);
+require("./src/routes/updateQuestion")(app);
+require("./src/routes/deleteQuestion")(app);
+require("./src/routes/getAllQuestions")(app);
+require("./src/routes/createQuestion")(app);
 
 require("./src/routes/signupToApi")(app);
 require("./src/routes/loginToApi")(app);
