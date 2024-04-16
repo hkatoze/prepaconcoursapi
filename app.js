@@ -35,6 +35,12 @@ require("./src/routes/deleteQuestion")(app);
 require("./src/routes/getAllQuestions")(app);
 require("./src/routes/createQuestion")(app);
 
+require("./src/routes/getAnswerByPk")(app);
+require("./src/routes/updateAnswer")(app);
+require("./src/routes/deleteAnswer")(app);
+require("./src/routes/getAllAnswers")(app);
+require("./src/routes/createAnswer")(app);
+
 require("./src/routes/signupToApi")(app);
 require("./src/routes/loginToApi")(app);
 
